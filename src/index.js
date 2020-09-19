@@ -49,7 +49,7 @@ function parse(input) {
     for (const smiley of smileys) {
         const url = `http://image.jeuxvideo.com/smileys_img/${smiley.value}.${smiley.ext}`;
         const replaceValue = `<img src="${url}" alt="${smiley.code}" data-code="${smiley.code}" title="${smiley.code}" width="${smiley.width}" height="${smiley.height}">`;
-        output = output.replace(smiley.code, replaceValue);
+        output = output.replaceAll(smiley.code, replaceValue);
     }
 
     return output;
