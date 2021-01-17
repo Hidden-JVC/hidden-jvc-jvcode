@@ -7,15 +7,15 @@ const renderer = {
     link(href) {
         if (/https?:\/\/(?:.*?\.)noelshack.com/.test(href)) {
             return `
-            <a href="${href}" target="_blank" class="xXx">
-                <img class="img-shack" src="${href}" alt="${href}" width="68" height="51">
+            <a href="${href}" target="_blank">
+                <img src="${href}" alt="${href}" width="68" height="51">
             </a>`;
         }
         return false;
     },
 
     blockquote(quote) {
-        return `<blockquote class="blockquote-jv">${quote}</blockquote>`;
+        return `<blockquote class="hidden-blockquote">${quote}</blockquote>`;
     },
 
     html(html) {
